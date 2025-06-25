@@ -1,6 +1,9 @@
+import { useRef } from "react"
+
 export default function App() {
     // state (état, données)
-    
+    const formRef = useRef<HTMLFormElement>(null)
+
     // comportements
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault()
@@ -9,6 +12,7 @@ export default function App() {
         const prenom = formData.get('prenom')
         alert(`Bonjour ${prenom}`)
 
+        formRef.current?.reset()
     }
 
     // affichage (render)
@@ -17,6 +21,7 @@ export default function App() {
             <h1>Bienvenue chez nous !</h1>
             <h2>Connectez-vous</h2>
             <form
+                ref={formRef}
                 onSubmit={handleLogin}
             >
                 <input 
