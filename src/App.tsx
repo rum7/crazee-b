@@ -1,3 +1,7 @@
+import { LoginPage } from "./components/pages/login/LoginPage";
 
-
-export default App
+export default function App() {
+    return (
+        <LoginPage />        
+    )    
+}
