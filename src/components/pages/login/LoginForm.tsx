@@ -1,8 +1,10 @@
 import { useRef } from "react"
+import { useNavigate } from "react-router"
 
 export function LoginForm() {
     // state (état, données)
     const formRef = useRef<HTMLFormElement>(null)
+    const navigate = useNavigate()
 
     // comportements
     const handleLogin = (e: React.FormEvent) => {
@@ -10,10 +12,9 @@ export function LoginForm() {
 
         const formData: FormData = new FormData(e.target as HTMLFormElement)
         const prenom = formData.get('prenom')
-        alert(`Bonjour ${prenom}`)
-
         formRef.current?.reset()
 
+        navigate(`/order/${prenom}`)
     }
 
     // affichage (render)
