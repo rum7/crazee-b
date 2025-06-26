@@ -18,21 +18,19 @@ export function LoginForm() {
 
     // affichage (render)
     return (
-        <div>
+        <form 
+            ref={formRef}
+            onSubmit={handleLogin}
+        >
             <h1>Bienvenue chez nous !</h1>
             <h2>Connectez-vous</h2>
-            <form 
-                ref={formRef}
-                onSubmit={handleLogin}
-            >
-                <input 
-                    type="text" 
-                    name="prenom" 
-                    placeholder="Entrez votre prénom..." 
-                    required 
-                />
-                <button type="submit">Accédez à votre espace</button>
-            </form>
-        </div>
+            <input 
+                type="text" 
+                name="prenom" 
+                placeholder="Entrez votre prénom..." 
+                required 
+            />
+            <button type="submit">Accédez à votre espace</button>
+        </form>
     )    
 }
