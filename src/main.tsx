@@ -1,21 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router'
-import './index.css'
+import { BrowserRouter } from 'react-router'
 
 import App from './App.tsx'
-import { ErrorPage } from './components/pages/error/ErrorPage.tsx'
-import { OrderPage } from './components/pages/order/OrderPage.tsx'
-
+import './index.css'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="/order/:prenom" element={<OrderPage />} />
-                <Route path="*" element={<ErrorPage />} />
-            </Routes>
+            <App />
         </BrowserRouter>
     </StrictMode>,
 )
