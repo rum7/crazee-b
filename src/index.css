@@ -55,6 +55,10 @@
     --weight-heavy: 800;
 }
 
+body {
+    margin: 0;
+}
+
 .auth {
 	min-height: 100vh;
 	background-color: indigo;
