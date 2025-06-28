@@ -60,12 +60,22 @@ body {
 }
 
 .auth {
-	min-height: 100vh;
-	background-color: indigo;
-	display: flex;
+    display: flex;
 	place-content: center;
 	place-items: center;
     flex-direction: column;
+	min-height: 100vh;
+    
+    ::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url(./assets/burger-background.jpg) rgba(0, 0, 0, .7);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+        z-index: -1;
+    }
 }
 
 .auth_logo {
