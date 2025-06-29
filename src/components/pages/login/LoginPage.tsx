@@ -1,5 +1,5 @@
+import { Logo } from "../../ui/Logo";
 import { LoginForm } from "./LoginForm";
-import logo from "../../../assets/logo-crazee-burger.png"
 
 export function LoginPage() {
     // state (état, données)
@@ -9,11 +9,7 @@ export function LoginPage() {
     // affichage (render)
     return (
         <main className="auth">
-            <div className="auth_logo">
-                <span>Crazee</span>
-                <img src={logo} alt="logo" />
-                <span>Burger</span>
-            </div>
+            <Logo />
             <LoginForm />
         </main>
     )    
