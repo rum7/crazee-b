@@ -22,16 +22,20 @@ export function LoginForm() {
         <form 
             ref={formRef}
             onSubmit={handleLogin}
+            className="auth_form"
         >
             <h1>Bienvenue chez nous !</h1>
-            <h2>Connectez-vous</h2>
-            <input 
-                type="text" 
-                name="prenom" 
-                placeholder="Entrez votre prénom..." 
-                required 
-            />
-            <button type="submit">Accédez à votre espace</button>
+            
+            <div>
+                <h2>Connectez-vous</h2>
+                <input
+                    type="text"
+                    name="prenom"
+                    placeholder="Entrez votre prénom..."
+                    required
+                />
+                <button type="submit">Accédez à votre espace</button>
+            </div>
         </form>
     )    
 }
