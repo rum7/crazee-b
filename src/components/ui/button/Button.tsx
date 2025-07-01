@@ -17,7 +17,7 @@ export function Button({
   return (
     <button 
         type="submit" 
-        className={`${variant} ${size}`}
+        className={`button ${variant} ${size}`}
     >
         {label}
         {Icon}
