@@ -2,14 +2,14 @@ import type { ReactElement } from "react"
 import './button.css'
 
 type ButtonProps = {
-    text: string,
+    label: string,
     Icon?: ReactElement
     variant: string,
     size: string
 }
 
 export function Button({
-    text,
+    label,
     Icon,
     variant,
     size,
@@ -19,7 +19,7 @@ export function Button({
         type="submit" 
         className={`${variant} ${size}`}
     >
-        {text}
+        {label}
         {Icon}
     </button>
   )

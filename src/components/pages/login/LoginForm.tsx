@@ -1,9 +1,9 @@
 import { useRef } from 'react'
-import { FaChevronRight } from 'react-icons/fa'
 import { useNavigate } from 'react-router'
-import { Input } from '../../ui/input/Input'
-import { IoPersonCircleOutline } from 'react-icons/io5'
+import { TextInput } from '../../ui/textInput/TextInput'
 import { Button } from '../../ui/button/Button'
+import { IoPersonCircleOutline } from 'react-icons/io5'
+import { FaChevronRight } from 'react-icons/fa'
 
 export function LoginForm() {
 	// state (état, données)
@@ -32,7 +32,7 @@ export function LoginForm() {
 
 			<div className="auth_container">
 				<h2>Connectez-vous</h2>
-				<Input
+				<TextInput
 					name="prenom"
 					placeholder="Entrez votre prénom"
 					required
@@ -40,7 +40,7 @@ export function LoginForm() {
 				/>
 
                 <Button 
-                    text="Accéder à mon espace" 
+                    label="Accéder à mon espace" 
                     Icon={<FaChevronRight />}
                     variant='primary_burger'
                     size='font-P0'

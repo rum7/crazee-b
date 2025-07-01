@@ -8,7 +8,7 @@ type InputProps = {
     Icon?: ReactElement
 }
 
-export function Input({ 
+export function TextInput({ 
     name, 
     Icon,
     ...extraProps
