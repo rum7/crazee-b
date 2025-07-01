@@ -1,68 +1,129 @@
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@500&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+:root {  
+    --color-dark: #17161a;
+    --color-incognito: #333;
+    --color-white: #fff;
+    --color-background_white: #f5f5f7;
+    --color-background_dark: #292729;
+    --color-primary: #ffa01b;
+    --color-primary_burger: #ff9f1b;
+    --color-green: green;
+    --color-success: #60bd4f;
+    --color-red: #e25549;
+    --color-redSecondary: #c4151c;
+    --color-blue: #51a7e1;
+    --color-greyLight: #e4e5e9;
+    --color-greyMedium: #a7a8ad;
+    --color-greySemiDark: #93a2b1;
+    --color-greyDark: #6f737e;
+    --color-greyBlue: #747b91;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 20px;
+    --spacing-lg: 32px;
+    --spacing-xl: 52px;
+    --spacing-xxl: 84px;
+
+    --font-XXXS: 8px;
+    --font-XXS: 10px;
+    --font-XS: 12px;
+    --font-P0: 15px;
+    --font-P1: 18px;
+    --font-P2: 20px;
+    --font-P3: 24px;
+    --font-P4: 36px;
+    --font-P5: 48px;
+    --font-P6: 60px;
+
+    --gridUnit: 8;
+
+    --borderRadius-subtle: 1;
+    --borderRadius-round: 5px;
+    --borderRadius-extraRound: 15px;
+    --borderRadius-circle: 50%;
+
+    /* --shadows- */
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semiBold: 600;
+    --weight-bold: 700;
+    --weight-heavy: 800;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+body, 
+h1, 
+h2 {
+    margin: 0;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.auth {
+    display: flex;
+	place-content: center;
+	place-items: center;
+    flex-direction: column;
+    gap: 40px 0;
+	min-height: 100vh;
+    padding-inline: 1rem;
+
+    ::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url(./assets/burger-background.jpg) rgba(0, 0, 0, .7);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+        z-index: -1;
+    }
+
+    .logo {
+        /* font-size: 110px; */
+        font-size: clamp(3.625rem, 0.5239rem + 13.2316vw, 6.875rem);
+        
+        img {
+            max-width: 200px;
+            width: 100%;
+        }
+    }
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+.auth_form {
+    max-width: 400px;
+    width: 100%;
+    color: var(--color-white);
+    font-family: "Amatic SC", sans-serif;
+    font-weight: var(--weight-bold);
+    text-align: center;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+    h1 {
+        position: relative;
+        font-size: var(--font-P5);
+        padding-bottom: 32px;
+        margin-bottom: 40px;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-primary);
+        }
+    }
+
+    h2 {
+        font-size: var(--font-P4);
+    }
+
+    .auth_container {
+        display: flex;
+        flex-direction: column;
+        gap: 18px 0;
+    }
+}

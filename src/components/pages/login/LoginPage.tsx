@@ -1,3 +1,4 @@
+import { Logo } from "../../ui/logo/Logo";
 import { LoginForm } from "./LoginForm";
 
 export function LoginPage() {
@@ -7,6 +8,9 @@ export function LoginPage() {
 
     // affichage (render)
     return (
-        <LoginForm />
+        <main className="auth">
+            <Logo />
+            <LoginForm />
+        </main>
     )    
 }

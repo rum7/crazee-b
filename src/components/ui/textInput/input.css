@@ -1,0 +1,25 @@
+.input_wrapper {
+    display: flex;
+    gap: 0 .5rem;
+    padding: 1rem 1.5rem;
+    font-family: "Arial", sans-serif;
+    font-size: var(--font-P0);
+    font-weight: var(--weight-regular);
+    border-radius: 5px;
+    background-color: var(--color-white);
+    
+    input {
+        flex-grow: 1;
+        border: 0;
+        
+        &::placeholder {
+            color: #D3D3D3;
+        }
+    }
+    
+    .input_icon {
+        width: 18px;
+        height: 18px;
+        color: #747B91;
+    }
+}
