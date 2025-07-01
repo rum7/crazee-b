@@ -1,0 +1,11 @@
+.logo {
+    display: flex;
+    align-items: center;
+    /* gap: 0 1.25rem; */
+    column-gap: clamp(0.015625rem, -1.1622rem + 5.0254vw, 1.25rem);
+    
+    color: var(--color-primary_burger);
+    font-family: "Amatic SC", sans-serif;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+}

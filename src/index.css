@@ -82,26 +82,14 @@ h2 {
     }
 
     .logo {
-    /* font-size: 110px; */
-    font-size: clamp(3.625rem, 0.5239rem + 13.2316vw, 6.875rem);
-    
-    img {
-        max-width: 200px;
-        width: 100%;
+        /* font-size: 110px; */
+        font-size: clamp(3.625rem, 0.5239rem + 13.2316vw, 6.875rem);
+        
+        img {
+            max-width: 200px;
+            width: 100%;
+        }
     }
-}
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    /* gap: 0 1.25rem; */
-    column-gap: clamp(0.015625rem, -1.1622rem + 5.0254vw, 1.25rem);
-    
-    color: var(--color-primary_burger);
-    font-family: "Amatic SC", sans-serif;
-    font-weight: var(--weight-bold);
-    text-transform: uppercase;
 }
 
 .auth_form {

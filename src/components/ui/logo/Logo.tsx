@@ -1,4 +1,5 @@
-import logo from '../../assets/logo-crazee-burger.png'
+import logo from '../../../assets/logo-crazee-burger.png'
+import './logo.css'
 
 export function Logo() {
 	return (
