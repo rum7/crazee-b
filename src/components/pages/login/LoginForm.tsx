@@ -3,6 +3,7 @@ import { FaChevronRight } from 'react-icons/fa'
 import { useNavigate } from 'react-router'
 import { Input } from '../../ui/input/Input'
 import { IoPersonCircleOutline } from 'react-icons/io5'
+import { Button } from '../../ui/button/Button'
 
 export function LoginForm() {
 	// state (état, données)
@@ -38,10 +39,12 @@ export function LoginForm() {
                     Icon={<IoPersonCircleOutline className="input_icon" />}
 				/>
 
-				<button type="submit">
-					Accéder à mon espace
-					<FaChevronRight />
-				</button>
+                <Button 
+                    text="Accéder à mon espace" 
+                    Icon={<FaChevronRight />}
+                    variant='primary_burger'
+                    size='font-P0'
+                />
 			</div>
 		</form>
 	)
