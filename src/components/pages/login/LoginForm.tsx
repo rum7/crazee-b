@@ -1,4 +1,6 @@
 import { useRef } from "react"
+import { FaChevronRight } from "react-icons/fa"
+import { IoPersonCircleOutline } from "react-icons/io5"
 import { useNavigate } from "react-router"
 
 export function LoginForm() {
@@ -26,15 +28,18 @@ export function LoginForm() {
         >
             <h1>Bienvenue chez nous !</h1>
             
-            <div>
+            <div className="auth_container">
                 <h2>Connectez-vous</h2>
-                <input
-                    type="text"
-                    name="prenom"
-                    placeholder="Entrez votre prénom..."
-                    required
-                />
-                <button type="submit">Accédez à votre espace</button>
+                <div className="auth_input_wrapper">
+                    <IoPersonCircleOutline color="#747B91" size={24} />
+                    <input
+                        type="text"
+                        name="prenom"
+                        placeholder="Entrez votre prénom"
+                        required
+                    />
+                </div>
+                <button type="submit">Accéder à mon espace<FaChevronRight /></button>
             </div>
         </form>
     )    
